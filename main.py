@@ -48,7 +48,7 @@ def start_screen():
         for line in new_level:
             if 'кнопка' not in line:
                 font = pygame.font.Font(None, 25)
-                message = font.render(line[0:-1], True, pygame.Color(255, 251, 22))
+                message = font.render(line[0:-1], True, pygame.Color(255, 255, 255))
                 screen.blit(message, (10, y))
                 y += 20
             else:
@@ -109,7 +109,7 @@ class Button:
             pygame.draw.rect(screen, self.inactive_color, (x + 5, y + 5, self.width - 10, self.height - 10))
 
         font = pygame.font.Font(None, size)
-        message = font.render(message, True, pygame.Color(255, 251, 22))
+        message = font.render(message, True, pygame.Color(255, 255, 255))
         screen.blit(message, (x + text_offset_x, y + text_offset_y))
 
 
