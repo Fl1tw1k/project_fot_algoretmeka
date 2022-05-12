@@ -19,6 +19,7 @@ def load_image(name, colorkey=None):
     return image
 
 
+
 pygame.init()
 screen_size = (990, 600)
 screen = pygame.display.set_mode(screen_size)
