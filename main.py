@@ -23,7 +23,7 @@ def load_image(name, colorkey=None):
 pygame.init()
 screen_size = (990, 600)
 screen = pygame.display.set_mode(screen_size)
-FPS = 30
+FPS = 15
 clock = pygame.time.Clock()
 level = 1
 
@@ -72,12 +72,14 @@ def next_level_true():
     global level
     level += 1
     screen.fill(pygame.Color(37, 9, 54))
+    print('1')
 
 
 def next_level_false():
     global level
     level += 1
     screen.fill(pygame.Color(37, 9, 54))
+    print('2')
 
 
 '''button.draw(280, 320, '  картон ', None, 35, 15, 100)
