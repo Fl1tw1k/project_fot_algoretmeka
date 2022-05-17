@@ -45,7 +45,8 @@ def start_screen():
         try:
             new_level = open('levels/' + str(level) + '.txt', "r", encoding="UTF-8")
         except FileNotFoundError:
-            print('игра закончена')
+            if level == 6:
+                final()
             break
         y = 20
         player_image = load_image(str(level) + '.png')
@@ -70,12 +71,6 @@ def start_screen():
                     button = Button(280, 60)
                     del line[0]
                     button.draw(700, 520, ' '.join(line)[0:-1], next_level, 25, 15, 20)
-        con = sqlite3.connect("db/buttons.sqlite")
-        cur = con.cursor()
-        result = cur.execute("SELECT * FROM buttons WHERE True_or_False = 'False'").fetchall()
-        if len(result) > 2:
-            print('ты умер')
-            break
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 terminate()
@@ -96,8 +91,6 @@ def next_level_true():
     result = cur.execute(f"SELECT True_or_False FROM buttons WHERE id = {level}").fetchall()
     if result[0][0] != "True":
         death()
-    else:
-        print('dalshe')
     level += 1
 
 
@@ -106,8 +99,6 @@ def next_level_false():
     result = cur.execute(f"SELECT True_or_False FROM buttons WHERE id = {level}").fetchall()
     if result[0][0] != "False":
         death()
-    else:
-        print('dalshe')
     level += 1
     screen.fill(pygame.Color(37, 9, 54))
 
@@ -117,14 +108,15 @@ def death():
         pygame.display.update()
         clock.tick(60)
         player_image = load_image('death.png')
-        car_rect = player_image.get_rect(center=(450, 300))
+        car_rect = player_image.get_rect(center=(470, 300))
         screen.blit(player_image, car_rect)
-        new_level = open('levels/' + str(level) + '.txt', "r", encoding="UTF-8")
+        new_level = open('levels/' + str(level) + '_death.txt', "r", encoding="UTF-8")
         font = pygame.font.Font(None, 25)
+        y = 360
         for line in new_level:
-            line = line
-        message = font.render(line, True, pygame.Color(255, 255, 255))
-        screen.blit(message, (10, y))
+            message = font.render(line, True, pygame.Color(206, 0, 2))
+            screen.blit(message, (250, y))
+            y += 30
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 terminate()
@@ -132,6 +124,30 @@ def death():
                 pass
         pygame.display.flip()
         clock.tick(FPS)
+
+
+def final():
+    while True:
+        pygame.display.update()
+        clock.tick(60)
+        player_image = load_image('final.png')
+        car_rect = player_image.get_rect(center=(470, 300))
+        screen.blit(player_image, car_rect)
+        new_level = open('levels/final.txt', "r", encoding="UTF-8")
+        font = pygame.font.Font(None, 25)
+        y = 10
+        for line in new_level:
+            message = font.render(line, True, pygame.Color(254, 254, 254))
+            screen.blit(message, (10, y))
+            y += 30
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                terminate()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                pass
+        pygame.display.flip()
+        clock.tick(FPS)
+
 
 
 class Button:
@@ -156,7 +172,7 @@ class Button:
             pygame.draw.rect(screen, self.inactive_color, (x + 5, y + 5, self.width - 10, self.height - 10))
 
         font = pygame.font.Font(None, size)
-        message = font.render(message, True, pygame.Color(255, 255, 255))
+        message = font.render(message, True, pygame.Color(254, 254, 254))
         screen.blit(message, (x + text_offset_x, y + text_offset_y))
 
 
