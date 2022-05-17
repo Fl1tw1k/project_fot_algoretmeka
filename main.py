@@ -22,13 +22,12 @@ def load_image(name, colorkey=None):
 
 con = sqlite3.connect("db/buttons.sqlite")
 cur = con.cursor()
-cur.execute(f"UPDATE buttons SET True_or_False = ''")
-con.commit()
 pygame.init()
 screen_size = (990, 600)
 screen = pygame.display.set_mode(screen_size)
 FPS = 15
 clock = pygame.time.Clock()
+time = 360
 level = 1
 
 
@@ -94,29 +93,46 @@ def next_level():
 def next_level_true():
     global level
     screen.fill(pygame.Color(37, 9, 54))
-    con = sqlite3.connect("db/buttons.sqlite")
-    cur = con.cursor()
-    cur.execute(f"UPDATE buttons SET True_or_False = 'True' WHERE id = {level}")
-    con.commit()
+    result = cur.execute(f"SELECT True_or_False FROM buttons WHERE id = {level}").fetchall()
+    if result[0][0] != "True":
+        death()
+    else:
+        print('dalshe')
     level += 1
 
 
 def next_level_false():
     global level
-    con = sqlite3.connect("db/buttons.sqlite")
-    cur = con.cursor()
-    cur.execute(f"UPDATE buttons SET True_or_False = 'False' WHERE id = {level}")
-    con.commit()
+    result = cur.execute(f"SELECT True_or_False FROM buttons WHERE id = {level}").fetchall()
+    if result[0][0] != "False":
+        death()
+    else:
+        print('dalshe')
     level += 1
     screen.fill(pygame.Color(37, 9, 54))
 
 
-'''button.draw(280, 320, '  картон ', None, 35, 15, 100)
-player_image = load_image('test.png')
-    car_rect = player_image.get_rect(center=(450, 300))
-    screen.blit(player_image, car_rect)
-    button = Button(400, 60)
-'''
+def death():
+    while True:
+        pygame.display.update()
+        clock.tick(60)
+        player_image = load_image('death.png')
+        car_rect = player_image.get_rect(center=(450, 300))
+        screen.blit(player_image, car_rect)
+        new_level = open('levels/' + str(level) + '.txt', "r", encoding="UTF-8")
+        font = pygame.font.Font(None, 25)
+        for line in new_level:
+            line = line
+        message = font.render(line, True, pygame.Color(255, 255, 255))
+        screen.blit(message, (10, y))
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                terminate()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                pass
+        pygame.display.flip()
+        clock.tick(FPS)
+
 
 class Button:
     def __init__(self, width, height):
