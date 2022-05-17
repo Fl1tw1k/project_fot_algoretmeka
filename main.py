@@ -74,10 +74,9 @@ def start_screen():
         con = sqlite3.connect("db/buttons.sqlite")
         cur = con.cursor()
         result = cur.execute("SELECT * FROM buttons WHERE True_or_False = 'False'").fetchall()
-        print(len(result))
         if len(result) > 2:
             print('ты умер')
-
+            break
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 terminate()
