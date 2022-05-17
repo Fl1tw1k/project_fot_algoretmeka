@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="cc6ffe5d-aef6-4647-98ff-567055246a6b" name="Changes" comment="" />
+=======
+    <list default="true" id="2bf45576-58d9-46bf-a130-dee3e485081c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/buttons.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/db/buttons.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+>>>>>>> ce3b9f4e2f18e4e2ff091d22253fdc126da2ee22
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +21,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+=======
+>>>>>>> ce3b9f4e2f18e4e2ff091d22253fdc126da2ee22
   <component name="ProjectId" id="297cSSGESlfSD7HL3hZaI2P9NzD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -57,7 +68,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="cc6ffe5d-aef6-4647-98ff-567055246a6b" name="Changes" comment="" />
+=======
+      <changelist id="23b0ca58-f2ae-4181-a81d-60917196af20" name="Changes" comment="" />
+>>>>>>> ce3b9f4e2f18e4e2ff091d22253fdc126da2ee22
       <created>1652467568523</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
