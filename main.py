@@ -1,6 +1,7 @@
 import os
 import sys
 import pygame
+import sqlite3
 
 
 def load_image(name, colorkey=None):
@@ -19,7 +20,10 @@ def load_image(name, colorkey=None):
     return image
 
 
-
+con = sqlite3.connect("db/buttons.sqlite")
+cur = con.cursor()
+cur.execute(f"UPDATE buttons SET True_or_False = ''")
+con.commit()
 pygame.init()
 screen_size = (990, 600)
 screen = pygame.display.set_mode(screen_size)
@@ -36,11 +40,14 @@ def terminate():
 def start_screen():
     game = True
     screen.fill(pygame.Color(37, 9, 54))
-    button = Button(480, 60)
     while game:
         pygame.display.update()
         clock.tick(60)
-        new_level = open('levels/' + str(level) + '.txt', "r", encoding="UTF-8")
+        try:
+            new_level = open('levels/' + str(level) + '.txt', "r", encoding="UTF-8")
+        except FileNotFoundError:
+            print('игра закончена')
+            break
         y = 20
         player_image = load_image(str(level) + '.png')
         car_rect = player_image.get_rect(center=(450, 300))
@@ -52,6 +59,7 @@ def start_screen():
                 screen.blit(message, (10, y))
                 y += 20
             else:
+                button = Button(480, 60)
                 line = line.split(' ')
                 if 'кнопка1' == line[0]:
                     del line[0]
@@ -59,6 +67,17 @@ def start_screen():
                 if 'кнопка2' == line[0]:
                     del line[0]
                     button.draw(500, 520, ' '.join(line)[0:-1], next_level_false, 25, 15, 20)
+                if 'кнопка3' == line[0]:
+                    button = Button(280, 60)
+                    del line[0]
+                    button.draw(700, 520, ' '.join(line)[0:-1], next_level, 25, 15, 20)
+        con = sqlite3.connect("db/buttons.sqlite")
+        cur = con.cursor()
+        result = cur.execute("SELECT * FROM buttons WHERE True_or_False = 'False'").fetchall()
+        print(len(result))
+        if len(result) > 2:
+            print('ты умер')
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 terminate()
@@ -68,18 +87,29 @@ def start_screen():
         clock.tick(FPS)
 
 
-def next_level_true():
+def next_level():
     global level
     level += 1
+
+
+def next_level_true():
+    global level
     screen.fill(pygame.Color(37, 9, 54))
-    print('1')
+    con = sqlite3.connect("db/buttons.sqlite")
+    cur = con.cursor()
+    cur.execute(f"UPDATE buttons SET True_or_False = 'True' WHERE id = {level}")
+    con.commit()
+    level += 1
 
 
 def next_level_false():
     global level
+    con = sqlite3.connect("db/buttons.sqlite")
+    cur = con.cursor()
+    cur.execute(f"UPDATE buttons SET True_or_False = 'False' WHERE id = {level}")
+    con.commit()
     level += 1
     screen.fill(pygame.Color(37, 9, 54))
-    print('2')
 
 
 '''button.draw(280, 320, '  картон ', None, 35, 15, 100)
