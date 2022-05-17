@@ -4,11 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <list default="true" id="cc6ffe5d-aef6-4647-98ff-567055246a6b" name="Changes" comment="" />
+=======
+>>>>>>> 7e0dd69ee6d0d52cf9e4692e6dee8c38cacfaac4
     <list default="true" id="2bf45576-58d9-46bf-a130-dee3e485081c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/buttons.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/db/buttons.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <list default="true" id="23b0ca58-f2ae-4181-a81d-60917196af20" name="Changes" comment="" />
+=======
+    <list default="true" id="1e0fd97a-7f2f-47bd-b171-49c2bbc95584" name="Changes" comment="" />
+>>>>>>> 038b5c0214165b8f7b9ed83831362f47e428929f
+=======
+    <list default="true" id="23b0ca58-f2ae-4181-a81d-60917196af20" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/levels/2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+>>>>>>> 587e7538748898f978b12f325c828619f08b605b
+>>>>>>> 92161b685af0803efd6791ec70788c47ade90646
+=======
+>>>>>>> ce3b9f4e2f18e4e2ff091d22253fdc126da2ee22
+>>>>>>> 7e0dd69ee6d0d52cf9e4692e6dee8c38cacfaac4
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,12 +42,51 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="294kLzkKvbCB68gttxuFKpzwQQ1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="297cSSGESlfSD7HL3hZaI2P9NzD" />
+>>>>>>> 587e7538748898f978b12f325c828619f08b605b
+=======
   <component name="ProjectId" id="297cSSGESlfSD7HL3hZaI2P9NzD" />
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
 =======
+=======
+  <component name="ProjectId" id="297cSSGESlfSD7HL3hZaI2P9NzD" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+>>>>>>> 109c10ee16da08f27c2d96d9a81370a5adf3691d
+=======
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+=======
+>>>>>>> ce3b9f4e2f18e4e2ff091d22253fdc126da2ee22
+  <component name="ProjectId" id="297cSSGESlfSD7HL3hZaI2P9NzD" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+>>>>>>> 7e0dd69ee6d0d52cf9e4692e6dee8c38cacfaac4
 >>>>>>> 587e7538748898f978b12f325c828619f08b605b
 >>>>>>> 11e0194a10c61a709560694dcc287d58e9ef0052
 =======
@@ -31,6 +95,13 @@
 =======
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
 >>>>>>> f71022203f5408adcd2e691d5930a23b43074627
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 109c10ee16da08f27c2d96d9a81370a5adf3691d
+=======
+>>>>>>> 109c10ee16da08f27c2d96d9a81370a5adf3691d
+=======
+>>>>>>> 7e0dd69ee6d0d52cf9e4692e6dee8c38cacfaac4
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,7 +109,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+<<<<<<< HEAD
+>>>>>>> 038b5c0214165b8f7b9ed83831362f47e428929f
+=======
+>>>>>>> 587e7538748898f978b12f325c828619f08b605b
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="project_fot_algoretmeka" />
@@ -47,9 +123,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Отличник\Documents\GitHub\project_fot_algoretmeka\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
@@ -67,15 +143,42 @@
       </list>
     </recent_temporary>
   </component>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <component name="TaskManager">
+=======
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="1e0fd97a-7f2f-47bd-b171-49c2bbc95584" name="Changes" comment="" />
+      <created>1652379696101</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652379696101</updated>
+    </task>
+>>>>>>> 038b5c0214165b8f7b9ed83831362f47e428929f
+=======
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="cc6ffe5d-aef6-4647-98ff-567055246a6b" name="Changes" comment="" />
+=======
       <changelist id="23b0ca58-f2ae-4181-a81d-60917196af20" name="Changes" comment="" />
+>>>>>>> ce3b9f4e2f18e4e2ff091d22253fdc126da2ee22
       <created>1652467568523</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652467568523</updated>
     </task>
+>>>>>>> 587e7538748898f978b12f325c828619f08b605b
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="result" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
